@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-5.11
+  - name: centos-6.7
+  - name: centos-7.2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[qas::default]
+    attributes:
+  - name: baseou
+    run_list:
+      - recipe[qas::default]
+    attributes:
+      qas:
+        base_ou: 'OU=Training,DC=example,DC=com'

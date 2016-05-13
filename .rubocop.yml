@@ -1,0 +1,19 @@
+AllCops:
+  Exclude:
+    - vendor/**
+    - metadata.rb
+    - Guardfile
+    - Rakefile
+    - test/cookbooks/apt_test/metadata.rb
+    - .kitchen/**
+    - spec/**/*
+
+Metrics/LineLength:
+    Max: 190
+
+Metrics/MethodLength:
+  Max: 12
+
+Style/ConditionalAssignment:
+  Exclude:
+    - 'providers/vastool.rb'

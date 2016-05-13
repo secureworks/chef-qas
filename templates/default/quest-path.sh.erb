@@ -1,0 +1,3 @@
+if ! echo ${PATH} | /bin/grep -q <%= node['qas']['quest_bin'] %>; then
+        PATH=${PATH}:<%= node['qas']['quest_bin'] %>
+fi

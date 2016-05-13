@@ -1,0 +1,3 @@
+if ( "${path}" !~ *<%= node['qas']['quest_bin'] %>* ) then
+        set path = ( $path  <%= node['qas']['quest_bin'] %> )
+endif
